@@ -15,6 +15,7 @@ get_header(); ?>
     <div class="home-right">
     <?php get_template_part( "content/home", "participate" ); ?>
     <?php get_template_part( "content/home", "news" ); ?>
+    <?php get_template_part( "content/home", "comments" ); ?>
     </div>
     <div class="home-left">
     <?php get_template_part( "content/home", "featured" ); ?>
