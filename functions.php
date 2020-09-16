@@ -609,7 +609,7 @@ function participate_content( $id, $participate ) {
       $item = $participate[ $id ];
       $title = isset( $item[ "title" ] ) ? sprintf( '<header><h4>%1$s</h4></header>', $item[ "title" ] ) : "";
       $content = apply_filters( 'the_content', $item[ "editor_content" ] );
-      $participateUrl = sprintf( '<p><a href="%1$s" class="%2$s">Get Started Now</a></p>', get_permalink( 2033 ), "get-started-icon" );
+      $participateUrl = sprintf( '<p><a href="%1$s" class="%2$s">Choose Your POPS</a></p>', get_permalink( 2033 ), "get-started-icon" );
 
       $html = sprintf( '<%1$s class="panel pops-%2$s">%3$s %4$s %5$s</%1$s>', "article", $id, $title, $content, $participateUrl );
   }
