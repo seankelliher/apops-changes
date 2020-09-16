@@ -3,7 +3,7 @@
 		<h2 class="section-title"><?php echo of_get_option( "news-heading" ); ?></h2>
 	</header>
 
-	<?php query_posts('posts_per_page=10'); ?>
+	<?php query_posts('posts_per_page=5'); ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 	<section class="news-post">
