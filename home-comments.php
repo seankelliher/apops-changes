@@ -12,7 +12,7 @@
 
                 if ( $recent_comments ) {
                     foreach ( (array) $recent_comments as $comment ) {
-                        echo '<section class="news-post">' . get_comment_author( $comment ) . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></section>';
+                        echo '<section class="news-post">' . get_comment_author( $comment ) . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a>:<br />"' . $comment->comment_content . '"</section>';
                         }
                     }
             ?>
