@@ -1,6 +1,6 @@
-<div class="home-section-comments"> <!--home-section-comments-->
+<div class="home-section-news"> <!--home-section-comments-->
     
-    <header class="comments-header"> <!--comments-header-->
+    <header class="news-header"> <!--comments-header-->
         <h2 class="section-title">Recent Comments</h2>
     </header>
 
@@ -12,7 +12,7 @@
 
                 if ( $recent_comments ) {
                     foreach ( (array) $recent_comments as $comment ) {
-                        echo '<section class="comments-post">' . get_comment_author( $comment ) . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></section>';
+                        echo '<section class="news-post">' . get_comment_author( $comment ) . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ) . '</a></section>';
                         }
                     }
             ?>
