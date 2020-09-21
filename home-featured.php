@@ -18,7 +18,7 @@
 
                     //Get the first sentense of post content.
                     $paras = wpautop( get_the_content() );
-                    $string = substr( $paras, 0, strpos( $paras, '.' ) + 1 );
+                    $string = substr( $paras, 0, strpos( $paras, '. ' ));
                     $clean = strip_tags($string);
 
                 ?>
@@ -45,9 +45,7 @@
 
     				<p><span class="meta-title"><?php typeOfSpace (); ?></span></p>
 
-                    <p>Learn more about <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">this POPS</a>.</p>
-
-                    <?php echo "<p>" . $clean . "</p>" ;?>
+                    <p><?php echo $clean ;?>..<a href="<?php the_permalink(); ?>" ?>continued</a>.</p>
 
         		</header>
 
