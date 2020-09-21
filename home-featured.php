@@ -43,7 +43,7 @@
 
                     <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
-    				<p><span class="meta-title"><?php typeOfSpace (); ?></p>
+    				<p><span class="meta-title"><?php typeOfSpace (); ?></span></p>
 
                     <p>Learn more about <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">this POPS</a>.</p>
 
