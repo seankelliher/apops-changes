@@ -16,6 +16,11 @@
                     $thumb_img = wp_get_attachment_image_src( $thumb_id, array(670,99999) );
                     $thumb_meta = get_post( $thumb_id );
 
+                    //Get the first sentense of post content.
+                    $paras = wpautop( get_the_content() );
+                    $string = substr( $paras, 0, strpos( $paras, '.' ) + 1 );
+                    $clean = strip_tags($string);
+
                 ?>
 
                 <div class="pops-image">
@@ -41,6 +46,8 @@
     				<p><span class="meta-title"><?php typeOfSpace (); ?></p>
 
                     <p>Learn more about <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">this POPS</a>.</p>
+
+                    <?php echo "<p>" . $clean . "</p>" ;?>
 
         		</header>
 
