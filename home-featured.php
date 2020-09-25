@@ -16,10 +16,21 @@
                     $thumb_img = wp_get_attachment_image_src( $thumb_id, array(670,99999) );
                     $thumb_meta = get_post( $thumb_id );
 
-                    //Get the first sentense of post content.
+                    //Get the post content.
                     $paras = wpautop( get_the_content() );
-                    $string = substr( $paras, 0, strpos( $paras, '. ' ));
+
+                    //Get part between 0 and 200.
+                    $string = substr( $paras, 0, 200 );
+
+                    //Strip the html tags.
                     $clean = strip_tags($string);
+
+                    //Divide $string into two parts.
+                    $stringPart1a = substr( $clean, 0, 150 );
+                    $stringPart2a = substr( $clean, 150, 180 );
+
+                    //In second string, extract part between 0 and "first space".
+                    $stringPart2b = substr( $stringPart2a, 0, strpos( $stringPart2a, " " ));
 
                 ?>
 
@@ -45,7 +56,7 @@
 
     				<p><span class="meta-title"><?php typeOfSpace (); ?></span></p>
 
-                    <p><?php echo $clean ;?>..<a href="<?php the_permalink(); ?>" ?>continued</a>.</p>
+                    <p><?php echo $stringPart1a . $stringPart2b ;?>...<a href="<?php the_permalink(); ?>" ?>continued</a>.</p>
 
         		</header>
 
