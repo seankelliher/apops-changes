@@ -1200,7 +1200,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     color: #fff;
 }
 @media only screen and (min-width: 47.14286em) {
-    .csstransforms .filter-bar .filters section.active .dropdown: after {
+    .csstransforms .filter-bar .filters section.active .dropdown::after {
     position: absolute;
     content: "";
     display: block;
@@ -1224,7 +1224,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     display: block;
 }
 @media only screen and (min-width: 47.14286em) {
-    .csstransforms .filter-bar .filters section.active .content: before {
+    .csstransforms .filter-bar .filters section.active .content::before {
     position: relative;
     content: "";
     display: block;
@@ -1234,7 +1234,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     border-color: #fff transparent transparent transparent;
     border-top-style: solid;
     margin: -14px auto;
-}
+    }
 }
 @media only screen and (min-width: 47.14286em) {
     .filter-bar .filters section {
@@ -1349,24 +1349,24 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     float: left;
 }
 @media only screen and (min-width: 47.14286em) {
-    .filter-search-box div: first-child {
+    .filter-search-box div::first-child {
     padding-left: 0;
     padding-right: 0;
     width: 75%;
     float: left;
-}
+    }
 }
 .filter-search-box div:last-child {
     width: 33.33333%;
     float: left;
 }
 @media only screen and (min-width: 47.14286em) {
-    .filter-search-box div: last-child {
+    .filter-search-box div::last-child {
     padding-left: 1.42857em;
     padding-right: 1.42857em;
     width: 25%;
     float: left;
-}
+    }
 }
 .filter-search-box input {
     margin-bottom: 0;
@@ -3190,14 +3190,14 @@ h2, h3 {
     left: 1.07143em;
 }
 @media only screen and (min-width: 47.14286em) {
-    .panel>p: last-child {
+    .panel>p:last-child {
     left: 3.71429em;
-}
+    }
 }
 @media only screen and (min-width: 73.14286em) {
-    .panel>p: last-child {
+    .panel>p:last-child {
     left: 3.07143em;
-}
+    }
 }.panel a {
     color: white;
     text-decoration: underline;
