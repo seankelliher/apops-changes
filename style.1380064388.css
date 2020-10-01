@@ -3401,7 +3401,7 @@ h2, h3 {
 .home-section-news .news-header {
     border-bottom: 1px solid #a6a8ab;
     padding: 0.71429em;
-    background-image: url('../img/svg/news.svg');
+    /*background-image: url('../img/svg/news.svg');*/
     background-position: 95% center;
     background-size: 25px;
     background-repeat: no-repeat;
