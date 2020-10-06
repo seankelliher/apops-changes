@@ -3329,8 +3329,11 @@ h2, h3 {
 @media only screen and (min-width: 47.14286em) {
     .home-section-submissions .carousel-nav {
     right: 20px;
+    }
 }
-}.featured-submission-header {
+
+/*"Featured Items" - Lower, Left section of Homepage - START*/
+.featured-submission-header {
     background-color: #3c84c5;
     padding: 1.07143em 1.42857em 1.07143em;
     background-position: 98% 50%;
@@ -3395,6 +3398,76 @@ h2, h3 {
 .featured-submission-content img {
     border: 1px solid #58595b;
 }
+/*"Featured Items" - Lower, Left section of Homepage - FINISH*/
+
+/*Revised "Featured Items" - Lower, Left section of Homepage - START*/
+.featured-submission-bar {
+    background-color: #3c84c5;
+    padding: 1.07143em 1.42857em 1.07143em;
+    background-position: 98% 50%;
+    background-repeat: no-repeat;
+    color: white;
+    background-size: 40px auto;
+}
+.featured-submission-bar .section-title {
+    color: white;
+}
+.featured-submission-content-item {
+    *zoom: 1;
+}
+.featured-submission-content-item::before, .featured-submission-content-item::after {
+    content: " ";
+    display: table;
+}
+.featured-submission-content-item::after {
+    clear: both;
+}
+.featured-submission-content-item article {
+    background-color: #d2d3d4;
+    margin-top: 0.5em;
+    padding: 1.42857em;
+}
+.featured-submission-content-item header {
+    border-bottom: 1px solid #a6a8ab;
+    margin-bottom: 1.78571em;
+    position: relative;
+    *zoom: 1;
+}
+.featured-submission-content-item header h2 {
+    float: left;
+    width: 50%;
+    margin: 0;
+    font-size: 20px;
+    color: #3c84c5;
+}
+.featured-submission-content-item header::before, .featured-submission-content-item header::after {
+    content: " ";
+    display: table;
+}
+.featured-submission-content-item header::after {
+    clear: both;
+}
+.featured-submission-content-item .meta {
+    position: absolute;
+    width: 50%;
+    bottom: 0px;
+    right: 0;
+    text-align: right;
+    text-transform: lowercase;
+    color: #58595b;
+}
+.featured-submission-content-item .meta .author {
+    font-weight: 500;
+    color: #595b5f;
+}
+.featured-submission-content-item figcaption {
+    color: #58595b;
+}
+.featured-submission-content-item img {
+    border: 1px solid #58595b;
+}
+/*Revised" Featured Items" - Lower, Left section of Homepage - FINISH*/
+
 .home-section-news {
     margin-top: 1.78571em;
 }
