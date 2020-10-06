@@ -1,25 +1,38 @@
 <div id="featured-items" class="home-section-items">
 
-    <header class="featured-submission-bar"> <!--Play/Pause button appended here-->
+    <header class="featured-submission-bar">
         <h2 class="section-title">Featured Items</h2>
     </header>
 
-    <div class="featured-submission-content-item"> <!--Slideshow injected here-->
+    <?php $args = array(
+        'numberposts' => '5',
+        post_type => 'featured-submission',
+        'post_status' => 'publish'
+    );
 
-        <article class="featured-submission-item">
+    $recent_posts = wp_get_recent_posts($args);?>
 
-            <header>
+    <div class="featured-submission-content-item">
 
-                <h2 class="title"><?php the_title(); ?></h2>
+       <?php foreach( $recent_posts as $recent ){?>
+            <article class="featured-submission-item">
+                <?php echo
+                '<header>
+                    <h2 class="title">' .  $recent["post_title"] . '</h2>     
+                </header>
+                <p>' . get_the_excerpt($recent["ID"]) . '<a href="' . get_permalink($recent["ID"]) . '">...Read more</a></p>';
 
-                <div class="meta">
-
-                </div>
-
-            </header>
-
-        </article>
-
+                if ( has_post_thumbnail($recent["ID"]) ) {
+                    echo  get_the_post_thumbnail($recent["ID"],'thumbnail');
+                } ?>
+            </article>
+            <?php
+        }?>
     </div>
 
 </div>
+
+
+<!--'<p>'.get_the_content($recent["ID"]).'</p>''-->
+<!--get_the_title($recent["ID"]) ALSO WORKS!-->
+
