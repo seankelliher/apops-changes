@@ -1,4 +1,4 @@
-@font-face {
+©@font-face {
     font-family: "ProximaNova";
     src: url('../fonts/proxima_nova/25EC41_B_0.eot');
     src: url('../fonts/proxima_nova/25EC41_B_0.eot?#iefix') format('eot'), url('../fonts/proxima_nova/25EC41_B_0.woff') format('woff'),  url('../fonts/proxima_nova/25EC41_B_0.ttf') format('truetype');
@@ -3435,7 +3435,7 @@ h2, h3 {
 }
 .featured-submission-content-item header h2 {
     float: left;
-    width: 50%;
+    width: 100%;
     margin: 0;
     font-size: 20px;
     color: #3c84c5;
