@@ -3428,7 +3428,7 @@ h2, h3 {
     padding: 1.42857em;
 }
 .featured-submission-content-item header {
-    border-bottom: 1px solid #a6a8ab;
+    /*border-bottom: 1px solid #a6a8ab;*/
     margin-bottom: 1.78571em;
     position: relative;
     *zoom: 1;
