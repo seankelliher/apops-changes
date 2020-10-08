@@ -20,6 +20,7 @@
             <article class="featured-submission-item">
                 <?php echo
                 '<header>
+                    <time>' . get_comment_date('n.j.y') . '</time>
                     <h2 class="title">' .  $recent["post_title"] . '</h2>     
                 </header>
                 <p>' . get_the_excerpt($recent["ID"]) . '<a href="' . get_permalink($recent["ID"]) . '">...Read more</a></p>';
