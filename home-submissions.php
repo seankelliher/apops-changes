@@ -7,7 +7,7 @@
     <?php $args = array(
         'post_type' => 'post',
         //'post_type' => 'featured-submission',
-        'numberposts' => '3',
+        'numberposts' => '4',
         'post_status' => 'publish',
         'tag' => 'featured-item',
     );
