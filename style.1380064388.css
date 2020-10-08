@@ -3447,6 +3447,14 @@ h2, h3 {
 .featured-submission-content-item header::after {
     clear: both;
 }
+.featured-submission-content-item time {
+    font-family: "Bebas",  "ProximaNova", Verdana, Geneva, sans-serif;
+    margin-right: 0.35714em;
+    letter-spacing: 0.07143em;
+    font-size: 12px;
+    color: #a6a8ab;
+    text-transform: uppercase;
+}
 .featured-submission-content-item .meta {
     position: absolute;
     width: 50%;
