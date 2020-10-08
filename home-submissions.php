@@ -5,9 +5,11 @@
     </header>
 
     <?php $args = array(
-        'numberposts' => '5',
-        post_type => 'featured-submission',
-        'post_status' => 'publish'
+        'post_type' => 'post',
+        //'post_type' => 'featured-submission',
+        'numberposts' => '3',
+        'post_status' => 'publish',
+        'tag' => 'featured-item',
     );
 
     $recent_posts = wp_get_recent_posts($args);?>
@@ -31,8 +33,3 @@
     </div>
 
 </div>
-
-
-<!--'<p>'.get_the_content($recent["ID"]).'</p>''-->
-<!--get_the_title($recent["ID"]) ALSO WORKS!-->
-
