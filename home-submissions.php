@@ -20,7 +20,7 @@
             <article class="featured-submission-item">
                 <?php echo
                     '<header>
-                        <time>' . get_comment_date('n.j.y') . '</time>
+                        <time>' . get_the_date('n.j.y', $recent["ID"]) . '</time>
                         <h2 class="title">' .  $recent["post_title"] . '</h2>     
                     </header>
                     <p>';
