@@ -3423,7 +3423,8 @@ h2, h3 {
     clear: both;
 }
 .featured-submission-content-item article {
-    background-color: #d2d3d4;
+    /*background-color: #d2d3d4;*/
+    background-color: #eee;
     margin-top: 0.5em;
     padding: 1.42857em;
 }
