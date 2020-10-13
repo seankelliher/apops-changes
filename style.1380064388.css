@@ -3456,6 +3456,17 @@ h2, h3 {
     color: #a6a8ab;
     text-transform: uppercase;
 }
+.featured-submission-content-item .h5-like {
+    color: #58595b;
+    font-family: "ProximaNova", Verdana, Geneva, sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1.231;
+    margin-bottom: 0;
+}
+.featured-submission-content-item .h5-like a {
+    text-decoration: none;
+}
 .featured-submission-content-item .meta {
     position: absolute;
     width: 50%;
