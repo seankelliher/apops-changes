@@ -28,7 +28,7 @@
                 <?php if ( has_post_thumbnail($recent["ID"]) ) {
                     echo get_the_post_thumbnail($recent["ID"],'thumbnail', array( 'class' => 'alignleft' ) );
                 };?>
-                <?php echo get_the_excerpt($recent["ID"]) . ' <a href="' . get_permalink($recent["ID"]) . '">Read more</a></p>';
+                <?php echo get_the_excerpt($recent["ID"]) . '<span class="h5-like"> <a href="' . get_permalink($recent["ID"]) . '">read more</a></span></p>';
                  ?>
             </article>
             <?php
