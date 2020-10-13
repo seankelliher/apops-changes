@@ -1213,3 +1213,11 @@ function fa_allow_tags_in_comments($data) {
   );
     return $data;
 }
+
+//Removes "Featured Items" from the Admin Menu.
+//If you want to see the "Featured Items" in the Admin Menu again,
+//Just delete this function.
+function wd_admin_menu_remove() {
+     remove_menu_page( 'edit.php?post_type=featured-submission' );
+}
+add_action( 'admin_menu', 'wd_admin_menu_remove' );
