@@ -22,11 +22,10 @@
                     '<header>
                         <time>' . get_the_date('n.j.y', $recent["ID"]) . '</time>
                         <h2 class="title">' .  $recent["post_title"] . '</h2>     
-                    </header>
-                    <p>';
+                    </header>';
                 ?>
                 <?php if ( has_post_thumbnail($recent["ID"]) ) {
-                    echo get_the_post_thumbnail($recent["ID"],'thumbnail', array( 'class' => 'alignleft' ) );
+                    echo get_the_post_thumbnail($recent["ID"],'thumbnail', array( 'class' => 'alignleft' ) ) . '<p>';
                 };?>
                 <?php echo get_the_excerpt($recent["ID"]) . '<span class="h5-like"> <a href="' . get_permalink($recent["ID"]) . '">read more</a></span></p>';
                  ?>
