@@ -14,13 +14,15 @@
 
     $recent_posts = wp_get_recent_posts($args);?>
 
+    <!--To add date to Featured Items, add below line inside <header>.-->
+    <!--'<time>' . get_the_date('n.j.y', $recent["ID"]) . '</time>-->
+
     <div class="featured-submission-content-item">
 
        <?php foreach( $recent_posts as $recent ){?>
             <article class="featured-submission-item">
                 <?php echo
                     '<header>
-                        <time>' . get_the_date('n.j.y', $recent["ID"]) . '</time>
                         <h2 class="title">' .  $recent["post_title"] . '</h2>     
                     </header>';
                 ?>
