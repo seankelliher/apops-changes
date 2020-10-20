@@ -33,11 +33,6 @@ the_post();
                 }
             ?>
 
-
-
-                <!--<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'maspops' ), 'after' => '</div>' ) ); ?>
-                <?php pops_edit_bar(); ?>-->
-
         </article><!-- #content -->
         <?php get_sidebar(); ?>
     </div><!-- #primary -->
