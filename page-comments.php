@@ -25,19 +25,21 @@ the_post();
                 $page = (!empty($_GET['userp'])) ? $_GET['userp'] : 1;
                 $per_page = 10;
                 $offset = ( ($page -1) * $per_page);
-            ?>
 
-            <?php $recent_comments = get_comments( array( 
-                'number' => 10, // number of comments to retrieve.
-                'status' => 'approve', // we only want approved comments.
-                'post_status' => 'publish' // limit to published comments.
-            ) );
+                //Arguments for the comments.
+                $args = array(
+                    'status' => 'approve', //Comment is approved.
+                    'post_status' => 'publish' //Post is published.
+                );
 
-            if ( $recent_comments ) {
-                foreach ( (array) $recent_comments as $comment ) {
-                    echo '<section class="news-post"><header><time>' . get_comment_date('n.j.y') . '</time><h5>' . $comment->comment_author . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ). '</a>:</h5>' . $comment->comment_content . '</section>';
+                //Retrieve the comments.
+                $recent_comments = get_comments( $args );
+
+                if ( $recent_comments ) {
+                    foreach ( (array) $recent_comments as $comment ) {
+                        echo '<section class="news-post"><header><time>' . get_comment_date('n.j.y') . '</time><h5>' . $comment->comment_author . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ). '</a>:</h5>' . $comment->comment_content . '</section>';
+                        }
                     }
-                }
             ?>
 
         </article><!-- #content -->
