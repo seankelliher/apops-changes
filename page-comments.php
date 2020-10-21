@@ -40,6 +40,24 @@ the_post();
                         echo '<section class="news-post"><header><time>' . get_comment_date('n.j.y') . '</time><h5>' . $comment->comment_author . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ). '</a>:</h5>' . $comment->comment_content . '</section>';
                         }
                     }
+
+                //Arguments for the "paginate_links".
+                $page_args = array(
+                    'base'         => get_permalink( get_the_ID() ). '%_%',
+                    'format'       => add_query_arg(array('userp' => '%#%')),
+                    'total'        => ceil($users->total_users / $per_page),
+                    'current'      => $page,
+                    'show_all'     => True,
+                    'end_size'     => 2,
+                    'mid_size'     => 2,
+                    'prev_next'    => True,
+                    'prev_text'    => __('« Previous'),
+                    'next_text'    => __('Next »'),
+                    'type'         => 'plain',
+                );
+
+                //Display the "paginate_links".
+                echo paginate_links($page_args);
             ?>
 
         </article><!-- #content -->
