@@ -29,7 +29,7 @@ the_post();
                 //Arguments for the comments.
                 $args = array(
                     'status' => 'approve', //Comment is approved.
-                    'post_status' => 'publish' //Post is published.
+                    'post_status' => 'publish', //Post is published.
                     'number' => $per_page,
                     'offset' => $offset,
                 );
