@@ -18,7 +18,14 @@ the_post();
                 <h1 class="page-title"><?php the_title(); ?></h1>
             </header><!-- .entry-header -->
 
-                <?php the_content(); ?>
+            <?php the_content(); ?>
+
+            <?php
+                //Page variables.
+                $page = (!empty($_GET['userp'])) ? $_GET['userp'] : 1;
+                $per_page = 10;
+                $offset = ( ($page -1) * $per_page);
+            ?>
 
             <?php $recent_comments = get_comments( array( 
                 'number' => 10, // number of comments to retrieve.
