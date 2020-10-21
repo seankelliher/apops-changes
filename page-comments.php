@@ -33,10 +33,10 @@ the_post();
                 );
 
                 //Retrieve the comments.
-                $recent_comments = get_comments( $args );
+                $all_comments = get_comments( $args );
 
-                if ( $recent_comments ) {
-                    foreach ( (array) $recent_comments as $comment ) {
+                if ( $all_comments ) {
+                    foreach ( (array) $all_comments as $comment ) {
                         echo '<section class="news-post"><header><time>' . get_comment_date('n.j.y') . '</time><h5>' . $comment->comment_author . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ). '</a>:</h5>' . $comment->comment_content . '</section>';
                         }
                     }
