@@ -19,4 +19,8 @@
 
     </section>
 
+    <div class="news-footer">
+        <a href="https://staging-jonukuze.temp312.kinsta.cloud/comments-archive/">All Comments &gt;</a>
+    </div>
+
 </div>
