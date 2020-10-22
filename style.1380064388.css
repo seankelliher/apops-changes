@@ -3521,6 +3521,23 @@ h2, h3 {
     color: #58595b;
     font-family: "ProximaNova", Verdana, Geneva, sans-serif;
 }
+article .news-post {
+    padding: 0.71429em 0.71429em 0.71429em 0;
+    border-bottom: 1px solid #eee;
+}
+article .news-post time {
+    font-family: "Bebas",  "ProximaNova", Verdana, Geneva, sans-serif;
+    margin-right: 0.35714em;
+    letter-spacing: 0.07143em;
+    font-size: 12px;
+    color: #a6a8ab;
+    text-transform: uppercase;
+}
+article .news-post h5 {
+    margin-bottom: 0;
+    color: #58595b;
+    font-family: "ProximaNova", Verdana, Geneva, sans-serif;
+}
 .home-section-news .news-footer {
     padding: 1.42857em 0.71429em 1.28571em;
     border-bottom: 1px solid #a6a8ab;
