@@ -26,19 +26,30 @@ the_post();
                 $per_page = 10;
                 $offset = ( ($page -1) * $per_page);
 
-                //Arguments for the comments.
-                $args = array(
-                    'status' => 'approve', //Comment is approved.
-                    'post_status' => 'publish', //Post is published.
+                //Args - comments (paginated).
+                $args1 = array(
+                    'status' => 'approve',
+                    'post_status' => 'publish',
                     'number' => $per_page,
                     'offset' => $offset,
                 );
 
-                //Retrieve the comments.
-                $all_comments = get_comments( $args );
+                //Args - comments (not paginated).
+                $args2 = array(
+                    'status' => 'approve',
+                    'post_status' => 'publish',
+                );
 
-                if ( $all_comments ) {
-                    foreach ( (array) $all_comments as $comment ) {
+                //Get comments (paginated).
+                $all_comments1 = get_comments( $args1 );
+
+                //Get comments (not paginated) and count.
+                $all_comments2 = get_comments( $args2 );
+                $all_comments_num = count( $all_comments2 );
+
+                //Display the paginated comments.
+                if ( $all_comments1 ) {
+                    foreach ( (array) $all_comments1 as $comment ) {
                         echo '<section class="news-post"><header><time>' . get_comment_date('n.j.y') . '</time><h5>' . $comment->comment_author . ' on <a href="' . esc_url( get_comment_link( $comment ) ) . '">' . get_the_title( $comment->comment_post_ID ). '</a>:</h5>' . $comment->comment_content . '</section>';
                         }
                     }
