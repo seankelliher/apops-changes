@@ -54,11 +54,11 @@ the_post();
                         }
                     }
 
-                //Arguments for the "paginate_links".
+                //Args - "paginate_links".
                 $page_args = array(
                     'base'         => get_permalink( get_the_ID() ). '%_%',
-                    'format'       => add_query_arg(array('userp' => '%#%')),
-                    'total'        => ceil($users->total_users / $per_page),
+                    'format'       => 'page%#%',
+                    'total'        => ceil($all_comments_num / $per_page),
                     'current'      => $page,
                     'show_all'     => True,
                     'end_size'     => 2,
