@@ -22,7 +22,7 @@ the_post();
 
             <?php
                 //Page variables.
-                $page = (!empty($_GET['userp'])) ? $_GET['userp'] : 1;
+                $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
                 $per_page = 10;
                 $offset = ( ($page -1) * $per_page);
 
