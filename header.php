@@ -14,7 +14,7 @@
 <script>
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '<?php echo WP_ANALYTICS; ?>']);
+  _gaq.push(['_setAccount', 'UA-35413373-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
