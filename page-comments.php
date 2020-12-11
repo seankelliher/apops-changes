@@ -78,7 +78,7 @@ the_post();
 
     </article> <!--#content-->
 
-    <?php get_sidebar(); ?>
+    <?php get_sidebar( 'news' ); ?>
 
 </div> <!--#primary-->
 
