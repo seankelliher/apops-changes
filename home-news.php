@@ -1,6 +1,6 @@
 <div class="home-section-news">
 	<header class="news-header">
-		<h2 class="section-title"><?php echo of_get_option( "news-heading" ); ?></h2>
+		<h2 class="section-title">Recent News and Announcements</h2>
 	</header>
 
 	<?php query_posts('posts_per_page=5'); ?>
