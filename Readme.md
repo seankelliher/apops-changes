@@ -1,26 +1,27 @@
-# APOPS Changes
+[![MIT License on GitHub](https://img.shields.io/github/license/seankelliher/apops-changes?style=flat-square)](/LICENSE.txt)
+## APOPS Changes
 
-This repo contains the files used to modify the existing apops.mas.org website. Primary changes are: (1) Modify the sidebar for single POPS locations; (2) Modify the homepage's "featured items" template partial and sidebar; (3) Create a "comments archive" for all comments submitted to the site by visitors; (4) Repair broken or depreciated CSS.
+Files to modify the existing apops.mas.org website. 
 
-## Authors
+## Project Status
 
-* **Sean Kelliher** - [seankelliher](https://github.com/seankelliher)
+Project is done for now, although future changes are likely. To be clear: this is not my original work. I was hired to make changes to existing work.
 
-## Deployment
+## Project Screen Shots
+
+* Screenshots are not included because site is available at [apops.mas.org](https://apops.mas.org).
+
+## Installation and Setup Instructions
 
 This is a Wordpress site. You'll need a remote or local server capable of running the Wordpress platform.
 
-## Built With
+## Reflection
 
-* PHP
-* JavaScript
-* CSS
-* HTML
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details.
+This site was created in the early 2000's by developers who are now doing other things. My tasks was to modify the homepage, some of the site's sidebars, and add a "comments" archive page. There were several challenges. Some of the code was now depreciated, and much had passed though many hands who each made their own fixes. As a result, organization was not great. 
 
 ## Acknowledgments
 
-* Readme file based on [template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) by Billie Thompson.
+* Readme guidance from [Brenna Martenson](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4).
+* Wordpress guidance from [developer.wordpress.org](https://developer.wordpress.org).
+* PHP guidance from [php.net](https://www.php.net).
+* Shields from [Shields](https://shields.io).
