@@ -1013,16 +1013,21 @@ function requiredAmenitiesVertical () {
 
     $results = $wpdb->get_results("SELECT t1.required_description, t1.comments, t2.description FROM jJOi2QWP94_dcp_required t1 INNER JOIN jJOi2QWP94_dcp_public_space_detail t2 ON t1.fk_public_space_detail = t2.pk_public_space_detail WHERE t1.fk_pops_detail = '$pname' AND t1.type_required = 'Required Amenities' ORDER BY t1.required_description ASC, t2.description ASC;");
 
-    foreach ($results as $result) {
+    if (count($results) > 0) {
 
-        if ($result->required_description === "None") {
-            echo "<li class='detail accordion-item'>No required amenities: " . $result->description . "</li>";
-        } elseif ($result->comments === "") {
-            echo "<li class='detail accordion-item'><strong class='accordion-trigger'>" . $result->required_description . "</strong>, " . $result->description . "</li>";
-        } else {
-            echo "<li class='detail accordion-item'><strong class='accordion-trigger'>" . $result->required_description . "</strong>, " . $result->description . ": " . $result->comments . "</li>";
+        foreach ($results as $result) {
+
+            if ($result->required_description === "None") {
+                echo "<li class='detail accordion-item'>No required amenities: " . $result->description . "</li>";
+            } elseif ($result->comments === "") {
+                echo "<li class='detail accordion-item'><strong class='accordion-trigger'>" . $result->required_description . "</strong>, " . $result->description . "</li>";
+            } else {
+                echo "<li class='detail accordion-item'><strong class='accordion-trigger'>" . $result->required_description . "</strong>, " . $result->description . ": " . $result->comments . "</li>";
+            }
         }
-    }
+    } else {
+        echo "<li class='detail accordion-item'>" . "No required amenities" . "</li>";
+    }           
 }
 
 /*Sidebar Single Pops - Permitted Amenities*/
